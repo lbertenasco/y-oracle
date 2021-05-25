@@ -11,7 +11,6 @@ describe('UniswapV3OracleWrapper', () => {
     [owner] = await ethers.getSigners();
   });
 
-
   it('Should deploy on mainnet fork', async function () {
     const UniswapV3OracleWrapper = await ethers.getContractFactory(
       'UniswapV3OracleWrapper'
@@ -22,12 +21,11 @@ describe('UniswapV3OracleWrapper', () => {
     const dai = '0x6b175474e89094c44da98b954eedeac495271d0f';
     const amountIn = e18;
     const amountOut = await uniswapV3OracleWrapper.getAmountOut(
-      univ3EthDaiPool ,// address _pair, // uniswapv3 pool
+      univ3EthDaiPool, // address _pair, // uniswapv3 pool
       weth, // address _tokenIn,
       amountIn, // uint256 _amountIn,
       dai // address _tokenOut
     );
     console.log('amountOut:', amountOut.div(e18).toNumber());
-
   });
 });

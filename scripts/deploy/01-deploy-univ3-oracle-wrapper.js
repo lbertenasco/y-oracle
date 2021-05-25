@@ -19,7 +19,7 @@ function promptAndSubmit() {
       prompt.run().then(async (answer) => {
         if (answer) {
           console.time('UniswapV3OracleWrapper deployed');
-          
+
           const UniswapV3OracleWrapper = await ethers.getContractFactory(
             'UniswapV3OracleWrapper'
           );
@@ -27,7 +27,10 @@ function promptAndSubmit() {
 
           console.timeEnd('UniswapV3OracleWrapper deployed');
 
-          console.log('UniswapV3OracleWrapper address:', uniswapV3OracleWrapper.address);
+          console.log(
+            'UniswapV3OracleWrapper address:',
+            uniswapV3OracleWrapper.address
+          );
           console.log(
             'PLEASE: change .config.json & example.config.json oracle.uniswapV3OracleWrapper address to:',
             uniswapV3OracleWrapper.address

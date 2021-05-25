@@ -12,7 +12,7 @@ import "../interfaces/oracle/IUniswapV3OracleWrapper.sol";
 contract UniswapV3OracleWrapper is UtilsReady, ISimpleOracle, IUniswapV3OracleWrapper {
     uint32 public override period = 60; // 60 seconds
 
-    constructor() UtilsReady() { }
+    constructor() UtilsReady() {}
 
     function setPeriod(uint32 _period) external onlyGovernor {
         require(_period > 0, "UniswapV3OracleWrapper::set-period:period-should-not-be-zero");

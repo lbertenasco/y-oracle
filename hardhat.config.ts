@@ -12,29 +12,29 @@ module.exports = {
     !process.env.FORK && process.env.TEST
       ? {}
       : {
-        hardhat: {
-          forking: {
-            enabled: process.env.FORK ? true : false,
+          hardhat: {
+            forking: {
+              enabled: process.env.FORK ? true : false,
+              url: process.env.MAINNET_HTTPS_URL,
+            },
+          },
+          // localMainnet: {
+          //   url: process.env.LOCAL_MAINNET_HTTPS_URL,
+          //   accounts: [process.env.LOCAL_MAINNET_PRIVATE_KEY],
+          // },
+          mainnet: {
             url: process.env.MAINNET_HTTPS_URL,
+            accounts: [process.env.MAINNET_PRIVATE_KEY],
+            gasPrice: 35000000000, // 35 gwei
+          },
+          staticMainnet: {
+            url: process.env.MAINNET_HTTPS_URL,
+            accounts: [
+              '0x0000000000000000000000000000000000000000000000000000000000000001',
+            ],
+            gasPrice: 1, // 1 wei
           },
         },
-        // localMainnet: {
-        //   url: process.env.LOCAL_MAINNET_HTTPS_URL,
-        //   accounts: [process.env.LOCAL_MAINNET_PRIVATE_KEY],
-        // },
-        mainnet: {
-          url: process.env.MAINNET_HTTPS_URL,
-          accounts: [process.env.MAINNET_PRIVATE_KEY],
-          gasPrice: 35000000000, // 35 gwei
-        },
-        staticMainnet: {
-          url: process.env.MAINNET_HTTPS_URL,
-          accounts: [
-            '0x0000000000000000000000000000000000000000000000000000000000000001',
-          ],
-          gasPrice: 1, // 1 wei
-        },
-      },
   solidity: {
     compilers: [
       {
@@ -42,14 +42,14 @@ module.exports = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 200
-          }
-        }
+            runs: 200,
+          },
+        },
       },
       {
         version: '0.7.6',
-      }
-    ]
+      },
+    ],
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS ? true : false,
