@@ -1,0 +1,64 @@
+{
+  "name": "@lbertenasco/y-oracle",
+  "description": "simple oracles for on-chain use",
+  "version": "0.0.1",
+  "files": [
+    "/contracts/**/*.sol",
+    "/interfaces/**/*.sol",
+    "!/contracts/mock"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbertenasco/y-oracle.git"
+  },
+  "author": "Luciano Bertenasco <lbertenasco@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lbertenasco/y-oracle/issues"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "oracle"
+  ],
+  "devDependencies": {
+    "@flashbots/ethers-provider-bundle": "0.3.1",
+    "@lbertenasco/contract-utils": "0.3.2",
+    "@nomiclabs/hardhat-ethers": "2.0.2",
+    "@nomiclabs/hardhat-etherscan": "2.1.2",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@openzeppelin/contracts": "4.1.0",
+    "@types/chai": "4.2.18",
+    "@types/chai-as-promised": "7.1.4",
+    "@types/mocha": "8.2.2",
+    "@types/node": "15.6.1",
+    "@uniswap/v2-core": "1.0.1",
+    "@uniswap/v2-periphery": "1.1.0-beta.0",
+    "@uniswap/v3-core": "github:lbertenasco/uniswap-v3-core",
+    "@uniswap/v3-periphery": "github:lbertenasco/uniswap-v3-periphery",
+    "chai": "4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "3.3.0",
+    "ethers": "5.2.0",
+    "hardhat": "2.3.0",
+    "hardhat-gas-reporter": "1.0.4",
+    "hardhat-preprocessor": "^0.1.4",
+    "prompt-confirm": "2.0.4",
+    "solidity-coverage": "^0.7.16",
+    "ts-node": "10.0.0",
+    "typescript": "4.2.4"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "test:gas": "REPORT_GAS=true npx hardhat test",
+    "compile": "npx hardhat compile"
+  },
+  "homepage": "https://github.com/lbertenasco/y-oracle#readme",
+  "main": "",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  }
+}
