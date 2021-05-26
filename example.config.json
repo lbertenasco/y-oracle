@@ -6,9 +6,6 @@
       "deployer": ""
     }
   },
-  "contracts": {
-    "mainnet": {}
-  },
   "infura": {
     "_name": "",
     "apiKey": ""
