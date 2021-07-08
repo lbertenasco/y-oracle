@@ -1,6 +1,6 @@
 {
   "name": "@lbertenasco/y-oracle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "simple oracles for on-chain use",
   "keywords": [
     "solidity",
@@ -26,6 +26,7 @@
   "files": [
     "/contracts/**/*.sol",
     "/interfaces/**/*.sol",
+    "/utils/contracts.ts",
     "!/contracts/mock"
   ],
   "scripts": {
