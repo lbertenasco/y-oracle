@@ -1,6 +1,6 @@
 {
   "name": "@lbertenasco/y-oracle",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "simple oracles for on-chain use",
   "keywords": [
     "solidity",
@@ -26,13 +26,14 @@
   "files": [
     "/contracts/**/*.sol",
     "/interfaces/**/*.sol",
-    "/utils/contracts.ts",
+    "/dist/utils/contracts.*",
     "!/contracts/mock"
   ],
   "scripts": {
     "commit": "git-cz",
     "compile": "hardhat compile",
     "coverage": "hardhat coverage",
+    "build": "tsc",
     "fork": "FORK=true hardhat node",
     "fork:script": "FORK=true hardhat run",
     "fork:test": "FORK=true npm run test",
@@ -40,7 +41,7 @@
     "postinstall": "husky install",
     "lint:check": "solhint 'contracts/**/*.sol' 'interfaces/**/*.sol' && prettier --check './**'",
     "lint:fix": "sort-package-json && prettier --write './**' && solhint --fix 'contracts/**/*.sol' 'interfaces/**/*.sol'",
-    "prepublishOnly": "pinst --disable",
+    "prepublishOnly": "npm run build && pinst --disable",
     "postpublish": "pinst --enable",
     "release": "standard-version",
     "test": "TEST=true hardhat compile && TEST=true mocha",
