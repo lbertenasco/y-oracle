@@ -5,7 +5,7 @@
 - [x] [`Keep3rV2OracleFactory`](./contracts/oracle/Keep3rV2OracleFactoryWrapper.sol)
   > [`0xa07662C041C4F7B31Fd61C13C44212fF35b5296D`](https://etherscan.io/address/0xa07662C041C4F7B31Fd61C13C44212fF35b5296D#code)
 - [x] [`UniswapV3`](./contracts/oracle/UniswapV3OracleWrapper.sol)
-  > not deployed
+  > [`0x71bdC5Ca931Ca9C11C5d19375cA6C0aAe5F5eA5f`](https://etherscan.io/address/0x71bdC5Ca931Ca9C11C5d19375cA6C0aAe5F5eA5f#code)
 - [ ] UniswapV2
 - [ ] (define next on-chain oracles to wrap)
 

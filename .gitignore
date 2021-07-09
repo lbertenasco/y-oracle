@@ -13,3 +13,6 @@ artifacts
 # Config files
 .env
 .config.json
+
+# tsc
+dist
