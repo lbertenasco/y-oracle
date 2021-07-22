@@ -1,6 +1,6 @@
 {
   "name": "@lbertenasco/y-oracle",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "simple oracles for on-chain use",
   "keywords": [
     "solidity",
@@ -27,7 +27,10 @@
     "/contracts/**/*.sol",
     "/interfaces/**/*.sol",
     "/dist/utils/contracts.*",
-    "!/contracts/mock"
+    "!/contracts/mock",
+    "/artifacts",
+    "!/artifacts/@openzeppelin",
+    "!/artifacts/build-info"
   ],
   "scripts": {
     "commit": "git-cz",
